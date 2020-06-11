@@ -305,7 +305,9 @@ def init():
 			tmp_fixed_bossData[j][i] = tmp_fixed_bossData[j][i].strip()
 
 	############## 일반보스 정보 리스트 #####################
+	print(bossNum)
 	for j in range(bossNum):
+		print(tmp_bossData[j])
 		tmp_len = tmp_bossData[j][1].find(':')
 		f.append(tmp_bossData[j][0][11:])         #bossData[0] : 보스명
 		f.append(tmp_bossData[j][1][10:tmp_len])  #bossData[1] : 시
