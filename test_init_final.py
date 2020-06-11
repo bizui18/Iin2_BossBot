@@ -1910,13 +1910,13 @@ while True:
 			else : 
 				###########################일반보스출력
 				if len(boss_information[0]) != 0:
-					boss_information[0] = "```diff\n" + boss_information[0] + "\n```"
+					boss_information[0] = "```diff\n" + '\033[96m' +boss_information[0] + '\033[0m' + "\n```"
 				else :
 					boss_information[0] = '``` ```'
 
 				embed = discord.Embed(
 						title = "----- 보스탐 정보 -----",
-						description= '\033[96m' +boss_information[0] + '\033[0m',
+						description= boss_information[0],
 						color=0x0000ff
 						)
 				await ctx.send( embed=embed, tts=False)
@@ -1928,7 +1928,7 @@ while True:
 
 					embed = discord.Embed(
 							title = '',
-							description= '\033[95m' + boss_information[i+1] + '\033[0m',
+							description= boss_information[i+1],
 							color=0x0000ff
 							)
 					await ctx.send( embed=embed, tts=False)
