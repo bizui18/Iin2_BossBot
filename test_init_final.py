@@ -1851,9 +1851,8 @@ while True:
 						for m_name in m_code:
 							if bossData[i][0] == m_name :
 								aa.append('-')				 #output_bossData[3] : -
-							else :
 								chk = 1
-						if chk == 1 :
+						if chk == 0 :
 							aa.append('+')				 #output_bossData[3] : +
 							
 					aa.append(bossData[i][2])                            #output_bossData[4] : 멍/미입력 보스
