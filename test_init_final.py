@@ -394,12 +394,12 @@ def init():
 		if outputTimeMin[i] == 0 :
 			regenembed.add_field(name=str(outputTimeHour[i]) + '시간', value= '```'+ ', '.join(map(str, sorted(regenbossName[i]))) + '```', inline=False)
 		else :
-			regenembed.add_field(name=str(outputTimeHour[i]) + '시간' + str(outputTimeMin[i]
-	if basicSetting[10] !="":
-		scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'] #) + '분', value= '```' + ','.join(map(str, sorted(regenbossName[i]))) + '```', inline=False)
+			regenembed.add_field(name=str(outputTimeHour[i]) + '시간' + str(outputTimeMin[i]) + '분', value= '```' + ','.join(map(str, sorted(regenbossName[i]))) + '```', inline=False)
 	
 	##########################################################
-정산
+
+	if basicSetting[10] !="":
+		scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'] #정산
 		credentials = ServiceAccountCredentials.from_json_keyfile_name(basicSetting[10], scope) #정산
 
 init()
