@@ -305,9 +305,9 @@ def init():
 			tmp_fixed_bossData[j][i] = tmp_fixed_bossData[j][i].strip()
 
 	############## 일반보스 정보 리스트 #####################
-	print(bossNum)
+	#print(bossNum)
 	for j in range(bossNum):
-		print(tmp_bossData[j])
+		#print(tmp_bossData[j])
 		tmp_len = tmp_bossData[j][1].find(':')
 		f.append(tmp_bossData[j][0][11:])         #bossData[0] : 보스명
 		f.append(tmp_bossData[j][1][10:tmp_len])  #bossData[1] : 시
@@ -864,10 +864,10 @@ async def kill_list_Save():
 		contents = repo.get_contents("kill_list.ini")
 		repo.update_file(contents.path, "kill list", output_kill_list, contents.sha)
 	except GithubException as e :
-		print ('save error!!')
+		print('save error!!')
 		print(e.args[1]['message']) # output: This repository is empty.
 		errortime = datetime.datetime.now()
-		print (errortime)
+		print(errortime)
 		pass
 
 #초성추출 함수
@@ -1846,25 +1846,15 @@ while True:
 					if bossMungFlag[i] == True :
 						aa.append(tmp_bossTime[i])                       #output_bossData[1] : 시간
 						aa.append(tmp_bossTime[i].strftime('%H:%M:%S'))  #output_bossData[2] : 시간(00:00:00) -> 초빼기 : aa.append(tmp_bossTime[i].strftime('%H:%M'))  
-						aa.append('-')	                                 #output_bossData[3] : -
+						aa.append(bossData[i][6])		         #output_bossData[3] : 그룹
 					else :
 						aa.append(bossTime[i])                           #output_bossData[1] : 시간 
 						aa.append(bossTime[i].strftime('%H:%M:%S'))      #output_bossData[2] : 시간(00:00:00) -> 초빼기 : aa.append(bossTime[i].strftime('%H:%M'))  
-						
-						m_code = ['탈킨','발보','셀루','스탄',\
-							  '릴리']
-						chk = 0
-						for m_name in m_code:
-							if bossData[i][0] == m_name :
-								aa.append('-')			 #output_bossData[3] : -
-								chk = 1
-						if chk == 0 :
-							aa.append('+')				 #output_bossData[3] : +
+						aa.append(bossData[i][6])		         #output_bossData[3] : 그룹
 							
 					aa.append(bossData[i][2])                                #output_bossData[4] : 멍/미입력 보스
 					aa.append(bossMungCnt[i])	                         #output_bossData[5] : 멍/미입력횟수
 					aa.append(bossData[i][7])	                         #output_bossData[7] : 메세지
-					print(aa)
 					ouput_bossData.append(aa)
 					aa = []
 
