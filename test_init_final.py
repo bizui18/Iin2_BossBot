@@ -394,12 +394,12 @@ def init():
 		if outputTimeMin[i] == 0 :
 			regenembed.add_field(name=str(outputTimeHour[i]) + '시간', value= '```'+ ', '.join(map(str, sorted(regenbossName[i]))) + '```', inline=False)
 		else :
-			regenembed.add_field(name=str(outputTimeHour[i]) + '시간' + str(outputTimeMin[i]) + '분', value= '```' + ','.join(map(str, sorted(regenbossName[i]))) + '```', inline=False)
+			regenembed.add_field(name=str(outputTimeHour[i]) + '시간' + str(outputTimeMin[i]
+	if basicSetting[10] !="":
+		scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'] #) + '분', value= '```' + ','.join(map(str, sorted(regenbossName[i]))) + '```', inline=False)
 	
 	##########################################################
-
-	if basicSetting[10] !="":
-		scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'] #정산
+정산
 		credentials = ServiceAccountCredentials.from_json_keyfile_name(basicSetting[10], scope) #정산
 
 init()
@@ -1917,7 +1917,7 @@ while True:
 
 				embed = discord.Embed(
 						title = "----- 보스탐 정보 -----",
-						description= boss_information[0],
+						description= '\033[96m' +boss_information[0] + '\033[0m',
 						color=0x0000ff
 						)
 				await ctx.send( embed=embed, tts=False)
@@ -1929,7 +1929,7 @@ while True:
 
 					embed = discord.Embed(
 							title = '',
-							description= boss_information[i+1],
+							description= '\033[95m' + boss_information[i+1] + '\033[0m',
 							color=0x0000ff
 							)
 					await ctx.send( embed=embed, tts=False)
