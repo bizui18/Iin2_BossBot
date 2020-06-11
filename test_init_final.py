@@ -1910,7 +1910,7 @@ while True:
 			else : 
 				###########################일반보스출력
 				if len(boss_information[0]) != 0:
-					boss_information[0] = "```diff\n" + '\033[96m' +boss_information[0] + '\033[0m' + "\n```"
+					boss_information[0] = "```diff\n" + boss_information[0] +"\n```"
 				else :
 					boss_information[0] = '``` ```'
 
@@ -1922,7 +1922,7 @@ while True:
 				await ctx.send( embed=embed, tts=False)
 				for i in range(len(boss_information)-1):
 					if len(boss_information[i+1]) != 0:
-						boss_information[i+1] = "```diff\n" + boss_information[i+1] + "\n```"
+						boss_information[i+1] = "```diff\n" + '\033[96m' + boss_information[i+1] + '\033[0m' + "\n```"
 					else :
 						boss_information[i+1] = '``` ```'
 
