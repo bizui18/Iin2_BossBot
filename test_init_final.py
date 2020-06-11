@@ -2562,8 +2562,11 @@ while True:
 								hours1 = hello[chkpos-2:chkpos]
 								minutes1 = hello[chkpos+1:chkpos+3]
 								now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
+								print("tmp_now1 = " + tmp_now)
 								tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
+								print("tmp_now2 = " + tmp_now)
 								tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
+								print("tmp_now3 = " + tmp_now)
 							else:
 								chkpos = len(hello)-2
 								hours1 = hello[chkpos-2:chkpos]
