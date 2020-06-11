@@ -1856,6 +1856,7 @@ while True:
 					aa.append(bossData[i][2])                            #output_bossData[4] : 멍/미입력 보스
 					aa.append(bossMungCnt[i])	                         #output_bossData[5] : 멍/미입력횟수
 					aa.append(bossData[i][6])	                         #output_bossData[6] : 메세지
+					print(aa)
 					ouput_bossData.append(aa)
 					aa = []
 
