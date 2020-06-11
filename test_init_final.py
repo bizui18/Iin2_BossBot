@@ -1846,7 +1846,7 @@ while True:
 						aa.append(bossTime[i])                           #output_bossData[1] : 시간 
 						aa.append(bossTime[i].strftime('%H:%M:%S'))      #output_bossData[2] : 시간(00:00:00) -> 초빼기 : aa.append(bossTime[i].strftime('%H:%M'))  
 						
-						m_code = ['탈킨','발보','셀루','스탄',/
+						m_code = ['탈킨','발보','셀루','스탄',\
 							  '릴리']
 						chk = 0
 						for m_name in m_code:
