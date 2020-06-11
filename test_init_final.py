@@ -315,7 +315,7 @@ def init():
 		f.append(tmp_bossData[j][3][20:])         #bossData[3] : 분전 알림멘트
 		f.append(tmp_bossData[j][4][13:])         #bossData[4] : 젠 알림멘트
 		f.append(tmp_bossData[j][1][tmp_len+1:])  #bossData[5] : 분
-		f.append(tmp_bossData[j][6])              #bossData[6] : 분
+		f.append(tmp_bossData[j][6][2:])              #bossData[6] : 분
 		f.append('')                              #bossData[7] : 메세지
 		bossData.append(f)
 		f = []
