@@ -1847,13 +1847,13 @@ while True:
 						aa.append(bossTime[i].strftime('%H:%M:%S'))      #output_bossData[2] : 시간(00:00:00) -> 초빼기 : aa.append(bossTime[i].strftime('%H:%M'))  
 						
 						m_code = ['탈킨','발보','셀루','스탄']
-						chk = false
+						chk = 0
 						for m_name in m_code:
 							if bossData[i][0] == m_name :
 								aa.append('-')				 #output_bossData[3] : -
 							else :
-								chk = true
-						if chk == true :
+								chk = 1
+						if chk == 1 :
 							aa.append('+')				 #output_bossData[3] : +
 							
 					aa.append(bossData[i][2])                            #output_bossData[4] : 멍/미입력 보스
