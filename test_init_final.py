@@ -311,7 +311,8 @@ def init():
 		f.append(tmp_bossData[j][3][20:])         #bossData[3] : 분전 알림멘트
 		f.append(tmp_bossData[j][4][13:])         #bossData[4] : 젠 알림멘트
 		f.append(tmp_bossData[j][1][tmp_len+1:])  #bossData[5] : 분
-		f.append('')                              #bossData[6] : 메세지
+		f.append(tmp_bossData[j][5])              #bossData[6] : 색
+		f.append('')                              #bossData[7] : 메세지
 		bossData.append(f)
 		f = []
 		bossTime.append(datetime.datetime.now()+datetime.timedelta(days=365, hours = int(basicSetting[0])))
@@ -1845,13 +1846,13 @@ while True:
 					else :
 						aa.append(bossTime[i])                           #output_bossData[1] : 시간 
 						aa.append(bossTime[i].strftime('%H:%M:%S'))      #output_bossData[2] : 시간(00:00:00) -> 초빼기 : aa.append(bossTime[i].strftime('%H:%M'))  
-						if bossData[i][0] == '바실라' :
-							aa.append('-')				 #output_bossData[3] : -
-						else :
-							aa.append('+')				 #output_bossData[3] : +
+						#if bossData[i][0] == '바실라' :
+							aa.append(bossData[i][6])				 #output_bossData[3] : -
+						#else :
+							#aa.append('+')				 #output_bossData[3] : +
 					aa.append(bossData[i][2])                            #output_bossData[4] : 멍/미입력 보스
 					aa.append(bossMungCnt[i])	                         #output_bossData[5] : 멍/미입력횟수
-					aa.append(bossData[i][6])	                         #output_bossData[6] : 메세지
+					aa.append(bossData[i][7])	                         #output_bossData[6] : 메세지
 					ouput_bossData.append(aa)
 					aa = []
 
@@ -2008,13 +2009,13 @@ while True:
 					else :
 						aa.append(bossTime[i])                           #output_bossData[1] : 시간
 						aa.append(bossTime[i].strftime('%H:%M:%S'))      #output_bossData[2] : 시간(00:00:00) -> 초빼기 : aa.append(bossTime[i].strftime('%H:%M'))
-						if bossData[i][0] == '바실라' :
-							aa.append('-')				 #output_bossData[3] : -
-						else :
-							aa.append('+')				 #output_bossData[3] : +
+						#if bossData[i][0] == '바실라' :
+							aa.append(bossData[i][6])				 #output_bossData[3] : -
+						#else :
+							#aa.append('+')				 #output_bossData[3] : +
 					aa.append(bossData[i][2])                            #output_bossData[4] : 멍/미입력 보스
 					aa.append(bossMungCnt[i])	                         #output_bossData[5] : 멍/미입력횟수
-					aa.append(bossData[i][6])	                         #output_bossData[6] : 메세지
+					aa.append(bossData[i][7])	                         #output_bossData[6] : 메세지
 					ouput_bossData.append(aa)
 					aa = []
 
