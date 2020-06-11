@@ -455,7 +455,7 @@ async def task():
 			if voice_client1.is_connected() :
 				await dbLoad()
 				await client.get_channel(channel).send( '< 다시 왔습니다! >', tts=False)
-				print("\x1b[34m" + "명치복구완료!!!!!!!!")
+				print("명치복구완료!!!!")
 
 	while not client.is_closed():
 		############ 워닝잡자! ############
