@@ -2545,17 +2545,22 @@ while True:
 				message = msg
 
 				hello = message.content
+				print("hello = " + hello)
 
 				for i in range(bossNum):
 					################ 보스 컷처리 ################ 
 					if message.content.startswith(bossData[i][0] +'컷') or message.content.startswith(convertToInitialLetters(bossData[i][0] +'컷')) or message.content.startswith(bossData[i][0] +' 컷') or message.content.startswith(convertToInitialLetters(bossData[i][0] +' 컷')):
+						print("bossData[i][7]1 = " + bossData[i][7])
 						if hello.find('  ') != -1 :
 							bossData[i][7] = hello[hello.find('  ')+2:]
+							print("bossData[i][7]2 = " + bossData[i][7])
 							hello = hello[:hello.find('  ')]
 						else:
 							bossData[i][7] = ''
+							print("bossData[i][7]3 = " + bossData[i][7])
 							
 						tmp_msg = bossData[i][7] +'컷'
+						print("tmp_msg = " + tmp_msg)
 						if len(hello) > len(tmp_msg) + 3 :
 							if hello.find(':') != -1 :
 								chkpos = hello.find(':')
