@@ -2578,11 +2578,18 @@ while True:
 								print("tmp_now3 = " + tmp_now)
 							else:
 								chkpos = len(hello)-2
+								print("chkpos = " + chkpos)
 								hours1 = hello[chkpos-2:chkpos]
+								print("hours1 = " + hours1)
 								minutes1 = hello[chkpos:chkpos+2]
+								print("minutes1 = " + minutes1)
 								now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
+								print("now2 = " + now2)
+								print("tmp_now = " + tmp_now)
 								tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
+								print("tmp_now2 = " + tmp_now)
 								tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
+								print("tmp_now3 = " + tmp_now)
 						else:
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = now2
@@ -2603,7 +2610,9 @@ while True:
 							now2 = tmp_now
 							bossMungCnt[i] = bossMungCnt[i] - 1
 						else :
+							print("now2-1 = " + now2)
 							now2 = now2 + datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
+							print("now2-2 = " + now2)
 									
 						tmp_bossTime[i] = bossTime[i] = nextTime = now2
 						tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
