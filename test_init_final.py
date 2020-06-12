@@ -2629,20 +2629,30 @@ while True:
 							bossData[i][7] = ''
 							
 						tmp_msg = bossData[i][0] +'멍'
+						print("tmp_msg = " + str(tmp_msg))
 						tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
-
+						print("tmp_now = " + str(tmp_now))
+						
 						if len(hello) > len(tmp_msg) + 3 :
 							temptime = tmp_now
 							if hello.find(':') != -1 :
 								chkpos = hello.find(':')
+								print("chkpos = " + str(chkpos))
 								hours1 = hello[chkpos-2:chkpos] 
-								minutes1 = hello[chkpos+1:chkpos+3]					
+								print("hours1 = " + str(hours1))
+								minutes1 = hello[chkpos+1:chkpos+3]
+								print("minutes1 = " + str(minutes1))
 								temptime = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
+								print("temptime = " + str(temptime))
 							else:
 								chkpos = len(hello)-2
+								print("chkpos = " + str(chkpos))
 								hours1 = hello[chkpos-2:chkpos]
-								minutes1 = hello[chkpos:chkpos+2]					
+								print("hours1 = " + str(hours1))
+								minutes1 = hello[chkpos:chkpos+2]
+								print("minutes1 = " + str(minutes1))
 								temptime = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
+								print("temptime = " + str(temptime))
 							
 							bossMungCnt[i] = 0
 							bossFlag[i] = False
