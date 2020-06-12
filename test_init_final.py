@@ -2559,7 +2559,7 @@ while True:
 							bossData[i][7] = ''
 							print("bossData[i][7]3 = " + bossData[i][7])
 							
-						tmp_msg = bossData[i][7] +'컷'
+						tmp_msg = bossData[i][0] +'컷'
 						print("tmp_msg = " + tmp_msg)
 						if len(hello) > len(tmp_msg) + 3 :
 							if hello.find(':') != -1 :
