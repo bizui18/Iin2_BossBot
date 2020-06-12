@@ -2610,9 +2610,7 @@ while True:
 							now2 = tmp_now
 							bossMungCnt[i] = bossMungCnt[i] - 1
 						else :
-							print("now2-1 = " + now2)
 							now2 = now2 + datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
-							print("now2-2 = " + now2)
 									
 						tmp_bossTime[i] = bossTime[i] = nextTime = now2
 						tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
